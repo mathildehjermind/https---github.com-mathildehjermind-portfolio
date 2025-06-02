@@ -1,0 +1,341 @@
+/*************** VARIABLER *****************************/
+html {
+  --orange: #ffdfc8;
+  --lyserrød: #ffbbbb;
+  --lilla: #ebeafd;
+  --babygul: #fcefd7;
+  --Brun: #9c7365;
+}
+
+/********** FONT ******/
+
+/****************** LOGO STYLING***********************/
+.logo {
+  width: 200px;
+  height: 60px;
+}
+/******************* BURGERMENU ***********************/
+
+/****** BURGERMENU *****/
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+  font-family: Cormorant Infant;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: #9c7365;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 20px;
+  }
+}
+
+/************* FORSIDE STYLING *****************/
+.cirkel1 {
+  width: 165px;
+  height: 165px;
+  background-color: #ffbbbb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  text-align: center;
+  margin-left: 1rem;
+  margin-top: 6rem;
+}
+
+.cirkel2 {
+  width: 180px;
+  height: 180px;
+  background-color: #ffbbbb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  text-align: center;
+  margin-left: 14rem;
+  margin-top: -15rem;
+}
+
+.cirkel3 {
+  width: 155px;
+  height: 155px;
+  background-color: #ffbbbb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  text-align: center;
+  margin-left: 17rem;
+  margin-top: 3rem;
+}
+
+.cirkel4 {
+  width: 210px;
+  height: 210px;
+  background-color: #ffbbbb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  text-align: center;
+  margin-left: 1rem;
+  margin-top: -3.5rem;
+}
+
+.bundtekst {
+  font-size: 11px;
+  margin-top: -5rem;
+  margin-left: 15rem;
+}
+
+.forsidetekst {
+  font-size: 10px;
+  margin-top: -0.3rem;
+  margin-left: 15rem;
+  margin-bottom: 5rem;
+}
+
+/******************* OM MIG **************************/
+.mig {
+  margin-top: 3rem;
+  text-align: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 150;
+}
+
+.portrætbillede {
+  width: auto;
+  height: 600px;
+  display: block;
+  margin: auto;
+  border-radius: 30px; /* Justér værdien for mere eller mindre runding */
+  margin-bottom: 4rem;
+}
+
+/** Klik her knap **/
+.primary {
+  display: block;
+  background-color: #9c7365;
+  color: white;
+  border: none;
+
+  font-size: 16px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/******************** MINE PROJEKTER ***********************/
+.portfolio2 {
+  font-family: Cormorant Infant;
+  font-size: 40px;
+  margin-left: 4rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* To kolonner */
+  gap: 2rem; /* Mellemrum mellem "cirklerne" */
+  justify-content: center; /* Centrer vandret */
+  align-content: center; /* Centrer lodret */
+}
+
+.cirkel5,
+.cirkel6,
+.cirkel7,
+.cirkel8 {
+  width: 165px;
+  height: 165px;
+  background-color: #ffdfc8;
+  border-radius: 8%; /* Gør dem runde – hvis ønsket */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  text-align: center;
+}
+
+.pprojekter {
+  font-family: Cormorant Infant;
+  font-size: 22px;
+  margin-top: -1.5rem;
+  margin-left: 4rem;
+}
+
+/*** til computer ***/
+
+/************** FORSIDE ************************/
+@media (min-width: 800px) {
+  .cirkel1 {
+    width: 300px;
+    height: 300px;
+    background-color: #ffbbbb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: center;
+    margin-left: 5rem;
+    margin-top: 9rem;
+  }
+
+  .cirkel2 {
+    width: 230px;
+    height: 230px;
+    background-color: #ffbbbb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: center;
+    margin-left: 30rem;
+    margin-top: -26.5rem;
+  }
+
+  .cirkel3 {
+    width: 330px;
+    height: 330px;
+    background-color: #ffbbbb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: center;
+    margin-left: 45rem;
+    margin-top: -1rem;
+  }
+
+  .cirkel4 {
+    width: 260px;
+    height: 260px;
+    background-color: #ffbbbb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: center;
+    margin-left: 63rem;
+    margin-top: -37rem;
+  }
+
+  .bundtekst {
+    font-size: 18px;
+    margin-top: 17rem;
+    margin-left: 2rem;
+  }
+
+  .forsidetekst {
+    font-size: 15px;
+    margin-left: 2rem;
+    margin-top: -0.3rem;
+    margin-bottom: 5rem;
+  }
+}
