@@ -118,6 +118,11 @@ header {
 }
 
 /************* FORSIDE STYLING *****************/
+.portfolio {
+  font-family: Cormorant Infant;
+  margin-left: 2rem;
+  font-size: 35px;
+}
 .cirkel1 {
   width: 165px;
   height: 165px;
@@ -131,6 +136,7 @@ header {
   text-align: center;
   margin-left: 1rem;
   margin-top: 6rem;
+  font-family: Maitree;
 }
 
 .cirkel2 {
@@ -146,6 +152,7 @@ header {
   text-align: center;
   margin-left: 14rem;
   margin-top: -15rem;
+  font-family: Maitree;
 }
 
 .cirkel3 {
@@ -161,6 +168,7 @@ header {
   text-align: center;
   margin-left: 17rem;
   margin-top: 3rem;
+  font-family: Maitree;
 }
 
 .cirkel4 {
@@ -176,12 +184,14 @@ header {
   text-align: center;
   margin-left: 1rem;
   margin-top: -3.5rem;
+  font-family: Maitree;
 }
 
 .bundtekst {
   font-size: 11px;
   margin-top: -5rem;
   margin-left: 15rem;
+  font-family: Cormorant Infant;
 }
 
 .forsidetekst {
@@ -189,6 +199,7 @@ header {
   margin-top: -0.3rem;
   margin-left: 15rem;
   margin-bottom: 5rem;
+  font-family: Maitree;
 }
 
 /******************* OM MIG **************************/
@@ -222,7 +233,6 @@ header {
   margin-bottom: 1rem;
   text-align: center;
   border-radius: 10px;
-  cursor: pointer;
 }
 
 /******************** MINE PROJEKTER ***********************/
@@ -231,28 +241,26 @@ header {
   font-size: 40px;
   margin-left: 4rem;
 }
+
 .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* To kolonner */
-  gap: 2rem; /* Mellemrum mellem "cirklerne" */
-  justify-content: center; /* Centrer vandret */
-  align-content: center; /* Centrer lodret */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem; /* skaber ensartet mellemrum mellem bokse */
 }
 
-.cirkel5,
-.cirkel6,
-.cirkel7,
-.cirkel8 {
-  width: 165px;
-  height: 165px;
-  background-color: #ffdfc8;
-  border-radius: 8%; /* Gør dem runde – hvis ønsket */
+.box {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #fedfc6;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: rgb(0, 0, 0);
-  font-size: 13px;
+  justify-content: center;
   text-align: center;
+  font-size: 13px;
+  font-family: Maitree;
 }
 
 .pprojekter {
@@ -260,6 +268,7 @@ header {
   font-size: 22px;
   margin-top: -1.5rem;
   margin-left: 4rem;
+  margin-bottom: 3rem;
 }
 
 /*** til computer ***/
