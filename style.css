@@ -116,6 +116,10 @@ header {
     font-size: 20px;
   }
 }
+/************** HEADER *********************/
+.backknap1 {
+  font-size: 12px;
+}
 
 /************* FORSIDE STYLING *****************/
 .portfolio {
@@ -237,9 +241,10 @@ header {
 
 /******************** MINE PROJEKTER ***********************/
 .portfolio2 {
+  display: flex;
+  justify-content: center;
   font-family: Cormorant Infant;
   font-size: 40px;
-  margin-left: 4rem;
 }
 
 .container {
@@ -250,9 +255,48 @@ header {
   gap: 3rem; /* skaber ensartet mellemrum mellem bokse */
 }
 
-.box {
+.box1 {
   width: 400px;
-  height: 200px;
+  height: 230px;
+  border-radius: 10px;
+  background-color: #fedfc6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+  font-family: Maitree;
+}
+
+.box2 {
+  width: 400px;
+  height: 230px;
+  border-radius: 10px;
+  background-color: #fedfc6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+  font-family: Maitree;
+}
+
+.box3 {
+  width: 400px;
+  height: 230px;
+  border-radius: 10px;
+  background-color: #fedfc6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+  font-family: Maitree;
+}
+
+.box4 {
+  width: 400px;
+  height: 230px;
   border-radius: 10px;
   background-color: #fedfc6;
   display: flex;
@@ -264,17 +308,147 @@ header {
 }
 
 .pprojekter {
+  display: flex;
+  justify-content: center;
   font-family: Cormorant Infant;
   font-size: 22px;
+  font-weight: 300;
   margin-top: -1.5rem;
-  margin-left: 4rem;
   margin-bottom: 3rem;
+}
+
+.undertekst {
+  font-family: Maitree;
+  font-size: 13px;
+  padding: 3rem;
+}
+
+/********** MINE PROJEKTER KNAPPER ***********/
+.knap {
+  margin-top: -5.5rem;
+  font-family: Maitree;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9c7365;
+}
+
+.knap1 {
+  margin-top: -5.5rem;
+  font-family: Maitree;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9c7365;
+}
+
+.knap2 {
+  margin-top: -5.5rem;
+  font-family: Maitree;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9c7365;
+}
+
+.knap3 {
+  margin-top: -5.5rem;
+  font-family: Maitree;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9c7365;
+}
+.knap4 {
+  text-align: center;
+  font-family: Maitree;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9c7365;
+  margin-bottom: -11rem;
+  margin-left: -7rem;
+}
+
+/**** Grundlæggende web ****/
+/* TEKST */
+.tema {
+  font-family: Cormorant Infant;
+  font-weight: 200;
+  font-size: 25px;
+  margin-left: 1rem;
+}
+
+.læring {
+  font-family: Cormorant Infant;
+  font-weight: 200;
+  font-size: 25px;
+  margin-left: 1rem;
+}
+
+.brødtekst {
+  font-family: Maitree;
+  font-size: 13px;
+  margin-top: -1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.linje {
+  /* vanret streg*/
+  height: 0.7px;
+  background-color: black;
+  margin-top: 2rem;
+}
+
+.proces {
+  font-family: Cormorant Infant;
+  font-size: 25px;
+  margin-left: 1rem;
+  font-weight: 200;
+}
+
+.web {
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+  margin-top: 3rem;
+}
+
+/*** knap ***/
+.backknap1 {
+  height: 50px; /* Eller hvad du har brug for */
+  display: flex;
+  align-items: center; /* Vertikal centrering */
+  justify-content: center; /* Horisontal centrering (valgfrit) */
+  color: #9c7365;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+/**** Grundlæggende UX/UI ****/
+.UXUI {
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+  margin-top: 3rem;
+}
+
+/**** Grundlæggende animation ****/
+.ani {
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+  margin-top: 3rem;
+}
+
+/**** Grundlæggende indhold ****/
+.ind {
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+  margin-top: 3rem;
 }
 
 /*** til computer ***/
 
-/************** FORSIDE ************************/
 @media (min-width: 800px) {
+  /************** FORSIDE ************************/
   .cirkel1 {
     width: 300px;
     height: 300px;
@@ -346,5 +520,103 @@ header {
     margin-left: 2rem;
     margin-top: -0.3rem;
     margin-bottom: 5rem;
+  }
+
+  /**** KNAPPERNE PÅ CIRKLERNE ****/
+  .knap1 {
+    position: relative;
+    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
+    left: 5vw;
+  }
+
+  .knap2 {
+    position: relative;
+    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
+    left: 5vw;
+  }
+
+  .knap4 {
+    position: relative;
+    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
+    left: 5vw;
+  }
+
+  .knap4 {
+    position: relative;
+    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
+    left: 5vw;
+  }
+
+  /********* PORTFOLIO SIDE **************/
+  /* OVERSKRIFT + TEKST*/
+  .undertekst {
+    width: 200px;
+    margin-top: -5rem;
+    font-size: 13.5px;
+    border: 1.5px solid #ffdfc8; /* sort kant */
+    padding: 1rem; /* luft indeni boksen */
+    margin-left: 2rem;
+    margin-top: -5rem;
+  }
+
+  /* Fælles styling for alle bokse */
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    position: absolute; /* Gør det muligt at placere boksene frit på skærmen */
+    width: 25vw; /* Bredden er 25% af skærmens bredde – responsiv */
+    height: 20vw; /* Højden er 20% af skærmens bredde – for at beholde formforholdet */
+    max-width: 1000px; /* Forhindrer at boksen bliver for stor på store skærme */
+    max-height: 1000px;
+    background-color: #fedfc6;
+    border-radius: 50%; /* Giver cirklen runde kanter */
+    margin-top: 8rem; /* Ekstra afstand fra toppen */
+  }
+
+  /* Placering af hver boks – justeres vha. top og left i vh/vw */
+  .box1 {
+    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
+    left: 5vw; /* Placeret 5% ind fra venstre */
+  }
+
+  .box2 {
+    top: 9vh; /* Placeret nær toppen */
+    left: 30vw; /* Placeret ca. midt på skærmen vandret */
+  }
+
+  .box3 {
+    top: 42vh; /* Nede mod bunden */
+    left: 50vw; /* Ca. midt på skærmen */
+  }
+
+  .box4 {
+    top: 12vh; /* Lidt nede fra toppen */
+    left: 72vw; /* Placeret mod højre */
+  }
+
+  /****************** GRUNDLÆGGENDE WEB **************************/
+  .tema {
+    margin-top: 2rem;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start; /* indholdet i grid, bliver justeret mod toppen af deres række.*/
+  }
+
+  .grid_1-1 > h1 {
+    /** vælg direkte h1-elementer indeni .grid_1-1// grid-column: 1 / -1;: Det betyder, at h1-elementet skal strække sig fra kolonne 1 til den sidste kolonne i grid’en ( hele bredden) 
+1 = første kolonne. -1 = sidste kolonne.  **/
+    grid-column: 1 / -1; /* Gør h1 overskriften fuld bredde */
+  }
+
+  .linje {
+    grid-column: 1 / -1;
+    height: 1px;
+    background-color: #000;
+    margin-top: 2rem;
   }
 }
