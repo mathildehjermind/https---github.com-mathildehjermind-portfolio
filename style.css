@@ -2,7 +2,7 @@
 html {
   --orange: #ffdfc8;
   --lyserrød: #ffbbbb;
-  --lilla: #ebeafd;
+  --lilla: #d8d7f1;
   --babygul: #fcefd7;
   --Brun: #9c7365;
 }
@@ -122,121 +122,168 @@ header {
 }
 
 /************* FORSIDE STYLING *****************/
-.portfolio {
-  font-family: Cormorant Infant;
-  margin-left: 2rem;
-  font-size: 35px;
-}
-.cirkel1 {
-  width: 165px;
-  height: 165px;
-  background-color: #ffbbbb;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  font-size: 13px;
-  text-align: center;
-  margin-left: 1rem;
-  margin-top: 6rem;
-  font-family: Maitree;
+.pil-billede {
+  height: 35px;
+  width: auto;
+  position: fixed; /* Fast position på skærmen */
+  bottom: 20px; /* 20px fra bunden */
+  left: 50%; /* Placerer den i midten */
+  transform: translateX(-50%); /* Justerer så den er helt centreret */
+  z-index: 1000; /* Sørger for den ligger øverst */
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* Giver en blød overgang hvis du skjuler den */
 }
 
-.cirkel2 {
-  width: 180px;
-  height: 180px;
-  background-color: #ffbbbb;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  font-size: 13px;
-  text-align: center;
-  margin-left: 14rem;
-  margin-top: -15rem;
-  font-family: Maitree;
+#pil {
+  margin-top: 100vh; /* Skubber sektionen ned, svarende til hele skærmhøjden */
+  padding: 2rem;
 }
 
-.cirkel3 {
-  width: 155px;
-  height: 155px;
-  background-color: #ffbbbb;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  font-size: 13px;
-  text-align: center;
-  margin-left: 17rem;
-  margin-top: 3rem;
-  font-family: Maitree;
+/* Vi laver en animation, der får noget til at hoppe op og ned */
+@keyframes bounce {
+  /* Start og slut på hoppet – her står billedet stille */
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0); /* Billedet er midt på og hopper ikke */
+  }
+
+  /* Midt i hoppet – her hopper billedet lidt op */
+  50% {
+    transform: translateX(-50%) translateY(-10px); /* Billedet er stadig i midten, men hopper 10 pixels op */
+  }
 }
 
-.cirkel4 {
-  width: 210px;
-  height: 210px;
-  background-color: #ffbbbb;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  font-size: 13px;
+/* Her siger vi, at billedet med klassen "pil-billede" skal bruge hoppet */
+.pil-billede {
+  animation: bounce 2s infinite; /* Hoppet tager 2 sekunder og gentager igen og igen uden at stoppe */
+}
+
+/* Valgfri animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(5px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(3px);
+  }
+}
+
+.port {
+  font-family: "Cormorant Infant";
+  font-size: 85px; /* Skalerer med skærmstørrelse */
+  font-weight: bold;
+  color: var(--lilla);
   text-align: center;
-  margin-left: 1rem;
-  margin-top: -3.5rem;
-  font-family: Maitree;
+}
+
+.folio {
+  font-family: "Cormorant Infant";
+  font-size: 85px; /* Skalerer med skærmstørrelse */
+  font-weight: bold;
+  color: var(--lilla);
+  text-align: center;
+  margin-top: -2rem;
 }
 
 .bundtekst {
   font-size: 11px;
-  margin-top: -5rem;
-  margin-left: 15rem;
-  font-family: Cormorant Infant;
+  font-family: "Cormorant Infant";
+  text-align: center;
+  margin-top: 1rem;
+  margin-top: -2rem;
 }
 
 .forsidetekst {
-  font-size: 10px;
-  margin-top: -0.3rem;
-  margin-left: 15rem;
-  margin-bottom: 5rem;
-  font-family: Maitree;
+  font-size: 9px;
+  font-family: "Maitree";
+  text-align: center;
+  margin-top: 0.3rem;
 }
 
+.velkommen {
+  font-family: "Cormorant Infant";
+}
+
+.tekst1 {
+  font-family: "Maitree";
+  font-size: 12px;
+  margin-bottom: 20rem;
+  background-color: var(--lilla);
+}
 /******************* OM MIG **************************/
 .mig {
   margin-top: 3rem;
   text-align: center;
-  align-items: center;
   font-size: 35px;
   font-weight: 150;
+  font-family: "Cormorant Infant";
 }
 
 .portrætbillede {
-  width: auto;
-  height: 600px;
-  display: block;
   margin: auto;
-  border-radius: 30px; /* Justér værdien for mere eller mindre runding */
+  border-radius: 30px; /* Justér rundingen */
   margin-bottom: 4rem;
+  max-width: 70%;
+  height: auto;
+  display: block;
 }
 
 /** Klik her knap **/
 .primary {
   display: block;
-  background-color: #9c7365;
+  background-color: var(--Brun);
   color: white;
   border: none;
-
   font-size: 16px;
-  margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 8px;
+  font-family: Maitree;
+  font-size: 12px;
+}
+
+#omtekst {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.5; /* linjeafstand */
+  font-family: Maitree;
+  font-size: 15px;
+}
+.omtekst2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 3rem;
+  line-height: 1.5; /* linjeafstand */
+  font-family: Maitree;
+  font-size: 15px;
+}
+
+.omtekst3 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.5; /* linjeafstand */
+  font-family: Maitree;
+  font-size: 15px;
+}
+
+.omtekst4 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 5rem;
+  line-height: 1.5; /* linjeafstand */
+  font-family: Maitree;
+  font-size: 15px;
 }
 
 /******************** MINE PROJEKTER ***********************/
@@ -259,7 +306,7 @@ header {
   width: 400px;
   height: 230px;
   border-radius: 10px;
-  background-color: #fedfc6;
+  background-color: var(--orange);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,7 +319,7 @@ header {
   width: 400px;
   height: 230px;
   border-radius: 10px;
-  background-color: #fedfc6;
+  background-color: var(--orange);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,7 +332,7 @@ header {
   width: 400px;
   height: 230px;
   border-radius: 10px;
-  background-color: #fedfc6;
+  background-color: var(--orange);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,7 +345,7 @@ header {
   width: 400px;
   height: 230px;
   border-radius: 10px;
-  background-color: #fedfc6;
+  background-color: var(--orange);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -325,48 +372,50 @@ header {
 
 /********** MINE PROJEKTER KNAPPER ***********/
 .knap {
-  margin-top: -5.5rem;
-  font-family: Maitree;
-  font-size: 12px;
-  font-weight: bold;
-  color: #9c7365;
-}
-
-.knap1 {
-  margin-top: -5.5rem;
-  font-family: Maitree;
-  font-size: 12px;
-  font-weight: bold;
-  color: #9c7365;
-}
-
-.knap2 {
-  margin-top: -5.5rem;
-  font-family: Maitree;
-  font-size: 12px;
-  font-weight: bold;
-  color: #9c7365;
-}
-
-.knap3 {
-  margin-top: -5.5rem;
-  font-family: Maitree;
-  font-size: 12px;
-  font-weight: bold;
-  color: #9c7365;
-}
-.knap4 {
-  text-align: center;
-  font-family: Maitree;
-  font-size: 12px;
-  font-weight: bold;
-  color: #9c7365;
-  margin-bottom: -11rem;
+  margin-top: 8rem;
   margin-left: -7rem;
+  font-family: Maitree;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--Brun);
+  text-align: center;
 }
 
-/**** Grundlæggende web ****/
+/********************* GRUNDLÆGGENDE ANIMATION *********************'**/
+.grid_1-1 {
+  background-color: #f7e7e0;
+  max-width: 100%;
+}
 /* TEKST */
+#anim {
+  display: flex;
+  justify-content: center;
+  font-size: 27px;
+  font-weight: lighter;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* h1 animation */
+#anim {
+  animation-name: ani_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+  position: relative; /* eller absolute/fixed */
+  z-index: 1; /* lavere værdi*/
+}
+
+@keyframes ani_kf {
+  0% {
+    translate: 0 -20%;
+  }
+  100% {
+    translate: 0 90%;
+  }
+}
+
 .tema {
   font-family: Cormorant Infant;
   font-weight: 200;
@@ -387,6 +436,7 @@ header {
   margin-top: -1rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  padding-right: 1rem;
 }
 
 .linje {
@@ -402,17 +452,112 @@ header {
   margin-left: 1rem;
   font-weight: 200;
 }
+.løsningstekst1 {
+  font-family: Maitree;
+  font-size: 13px;
+  margin-top: -1rem;
+  text-align: left;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
 
+.løsningstekst {
+  font-family: Maitree;
+  font-size: 13px;
+  margin-top: -1rem;
+  text-align: left;
+  margin-left: 1rem;
+  margin-bottom: 5rem;
+  margin-right: 1rem;
+}
+
+.løsningstekst2 {
+  font-family: Maitree;
+  font-size: 13px;
+  margin-top: -1rem;
+  text-align: left;
+  margin-left: 1rem;
+  margin-bottom: 5rem;
+  margin-right: 1rem;
+  margin-top: -4rem;
+}
+
+.klikmig-i {
+  font-family: Cormorant Infant;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 200;
+  color: #9c7365;
+  text-decoration: underline;
+  margin-left: 2rem;
+}
+
+.skitsera {
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+  margin-top: -2rem;
+  max-width: 100%;
+  height: 250px;
+  display: block;
+}
+
+.klikmigani {
+  font-family: Cormorant Infant;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 200;
+  color: #9c7365;
+  text-decoration: underline;
+  margin-left: 2rem;
+}
+
+.billede1 {
+  height: 190px;
+  width: auto;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.billede2 {
+  height: 190px;
+  width: auto;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*** COMPUTER ***/
+
+/** WEB? **/
 .web {
   display: flex;
   justify-content: center;
   font-weight: 200;
-  margin-top: 3rem;
+  margin-top: 4rem;
+  font-family: Cormorant Infant;
+}
+
+.klikmig-web {
+  font-family: Cormorant Infant;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 200;
+  color: #9c7365;
+  text-decoration: underline;
+  margin-left: 1rem;
+}
+
+.comskærm {
+  margin-bottom: 5rem;
+  max-width: 100%;
+  height: 250px;
+  display: block;
+  margin-top: -1rem;
 }
 
 /*** knap ***/
 .backknap1 {
-  height: 50px; /* Eller hvad du har brug for */
+  height: 50px;
   display: flex;
   align-items: center; /* Vertikal centrering */
   justify-content: center; /* Horisontal centrering (valgfrit) */
@@ -421,178 +566,220 @@ header {
   margin-right: 1rem;
 }
 
-/**** Grundlæggende UX/UI ****/
-.UXUI {
+/***************** GRUNDLÆGGENDE UX/UI *******************/
+#uxui {
   display: flex;
   justify-content: center;
   font-weight: 200;
   margin-top: 3rem;
 }
 
-/**** Grundlæggende animation ****/
-.ani {
+.dokumentation {
+  padding: 1rem;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin-bottom: 6rem;
+  margin-top: -2rem;
+}
+
+.klikmig-ux {
+  font-family: Cormorant Infant;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 200;
+  color: #9c7365;
+  text-decoration: underline;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.tests {
+  margin-left: 2rem;
+  margin-top: -2rem;
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+/********************** GRUNDLÆGGENDE INDHOLD **********************/
+#indh {
   display: flex;
   justify-content: center;
   font-weight: 200;
   margin-top: 3rem;
 }
 
-/**** Grundlæggende indhold ****/
-.ind {
+.skitseri {
+  margin-bottom: 4rem;
+  margin-left: 2rem;
+
+  max-width: 100%;
+  height: 200px;
+  display: block;
+}
+
+/*********************** FOOTER ********************************/
+footer {
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.1); /* Skygge i toppen */
+}
+
+.footer-container h4 {
+  margin-bottom: 1.5rem;
+  font-family: "Cormorant Infant";
+}
+
+.footer-links {
   display: flex;
   justify-content: center;
-  font-weight: 200;
-  margin-top: 3rem;
+  gap: 20px;
+  flex-wrap: wrap; /* så de hopper ned hvis der ikke er plads */
+  text-decoration: underline;
+  font-family: "Maitree";
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 /*** til computer ***/
-
 @media (min-width: 800px) {
   /************** FORSIDE ************************/
-  .cirkel1 {
-    width: 300px;
-    height: 300px;
-    background-color: #ffbbbb;
-    border-radius: 50%;
+  .main1 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
     text-align: center;
-    margin-left: 5rem;
-    margin-top: 9rem;
   }
 
-  .cirkel2 {
-    width: 230px;
-    height: 230px;
-    background-color: #ffbbbb;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
+  .port {
+    font-family: "Cormorant Infant";
+    font-size: 12vw; /* Skalerer med skærmstørrelse */
+    font-weight: bold;
+    color: var(--lilla);
     text-align: center;
-    margin-left: 30rem;
-    margin-top: -26.5rem;
+    margin-left: -25rem;
+    margin-top: 2rem;
   }
 
-  .cirkel3 {
-    width: 330px;
-    height: 330px;
-    background-color: #ffbbbb;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
+  .folio {
+    font-family: "Cormorant Infant";
+    font-size: 12vw; /* Skalerer med skærmstørrelse */
+    font-weight: bold;
+    color: var(--lilla);
     text-align: center;
-    margin-left: 45rem;
-    margin-top: -1rem;
-  }
-
-  .cirkel4 {
-    width: 260px;
-    height: 260px;
-    background-color: #ffbbbb;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    text-align: center;
-    margin-left: 63rem;
-    margin-top: -37rem;
+    margin-top: -5rem;
+    margin-right: -20rem;
   }
 
   .bundtekst {
-    font-size: 18px;
-    margin-top: 17rem;
-    margin-left: 2rem;
+    font-size: 1.3vw;
+    font-family: "Cormorant Infant";
+    text-align: center;
+    margin-top: -6rem;
+    margin-left: 28rem;
   }
 
   .forsidetekst {
-    font-size: 15px;
-    margin-left: 2rem;
+    font-size: 1vw;
+    font-family: "Maitree";
+    text-align: center;
     margin-top: -0.3rem;
-    margin-bottom: 5rem;
+    margin-left: 28rem;
   }
 
-  /**** KNAPPERNE PÅ CIRKLERNE ****/
-  .knap1 {
-    position: relative;
-    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
-    left: 5vw;
+  .velkommen {
+    font-family: "Cormorant Infant";
+    text-align: center;
   }
 
-  .knap2 {
-    position: relative;
-    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
-    left: 5vw;
-  }
-
-  .knap4 {
-    position: relative;
-    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
-    left: 5vw;
-  }
-
-  .knap4 {
-    position: relative;
-    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
-    left: 5vw;
+  .tekst1 {
+    font-family: "Maitree";
+    font-size: 15px;
+    margin-bottom: 20rem;
+    background-color: var(--lilla);
   }
 
   /********* PORTFOLIO SIDE **************/
   /* OVERSKRIFT + TEKST*/
   .undertekst {
-    width: 200px;
-    margin-top: -5rem;
+    width: 100%; /* Brug hele bredden af containeren */
+    max-width: 400px; /* Men aldrig bredere end 400px */
+    margin: 2rem 0 0 0; /* Ingen auto-centrering – start helt til venstre */
+    padding: 1rem;
     font-size: 13.5px;
-    border: 1.5px solid #ffdfc8; /* sort kant */
-    padding: 1rem; /* luft indeni boksen */
-    margin-left: 2rem;
-    margin-top: -5rem;
+    border: 1.5px solid var(--orange);
+    box-sizing: border-box;
+    text-align: center; /* Sørg for teksten ikke er centreret */
   }
 
-  /* Fælles styling for alle bokse */
-  .box1,
-  .box2,
-  .box3,
-  .box4 {
-    position: absolute; /* Gør det muligt at placere boksene frit på skærmen */
-    width: 25vw; /* Bredden er 25% af skærmens bredde – responsiv */
-    height: 20vw; /* Højden er 20% af skærmens bredde – for at beholde formforholdet */
-    max-width: 1000px; /* Forhindrer at boksen bliver for stor på store skærme */
+  .container {
+    position: relative; /* For at de absolut placerede bokse positioneres ift. container */
+  }
+
+  /* Fælles styling for bokse */
+  .box {
+    position: absolute;
+    width: 25vw;
+    height: 20vw;
+    max-width: 1000px;
     max-height: 1000px;
-    background-color: #fedfc6;
-    border-radius: 50%; /* Giver cirklen runde kanter */
-    margin-top: 8rem; /* Ekstra afstand fra toppen */
+    background-color: var(--orange);
+    border-radius: 50%;
+    margin-top: 8rem;
+    display: flex; /* Brug flexbox */
+    flex-direction: column; /* Sæt elementer i kolonne */
+    justify-content: center; /* Vertikal centrering */
+    align-items: center; /* Horisontal centrering */
+    text-align: center; /* Centrer teksten */
+    font-size: 15px;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 
-  /* Placering af hver boks – justeres vha. top og left i vh/vw */
+  /* Placering af hver boks */
   .box1 {
-    top: 38vh; /* Placeret 38% ned fra toppen af skærmen */
-    left: 5vw; /* Placeret 5% ind fra venstre */
+    top: -6vh;
+    left: 1vw;
   }
 
   .box2 {
-    top: 9vh; /* Placeret nær toppen */
-    left: 30vw; /* Placeret ca. midt på skærmen vandret */
+    top: -35vh;
+    left: 23vw;
   }
 
   .box3 {
-    top: 42vh; /* Nede mod bunden */
-    left: 50vw; /* Ca. midt på skærmen */
+    top: -6vh;
+    left: -30vw;
   }
 
   .box4 {
-    top: 12vh; /* Lidt nede fra toppen */
-    left: 72vw; /* Placeret mod højre */
+    top: -35vh;
+    left: -49vw;
+  }
+
+  /* Styling af knapperne */
+  .knap {
+    margin-top: 3rem;
+    font-size: 12px;
+    border-radius: 5px;
+    text-decoration: underline;
+    color: var(--Brun);
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 1rem;
   }
 
   /****************** GRUNDLÆGGENDE WEB **************************/
@@ -618,5 +805,129 @@ header {
     height: 1px;
     background-color: #000;
     margin-top: 2rem;
+  }
+
+  .klikmig-web {
+    margin-top: -7rem;
+    margin-left: 11vw;
+  }
+
+  .comskærm {
+    margin-top: -1rem;
+  }
+
+  .billede1 {
+    max-width: 75%;
+    height: auto;
+    display: block;
+  }
+
+  .billede2 {
+    max-width: 75%;
+    height: auto;
+    display: block;
+  }
+
+  .løsningstekst1 {
+    grid-column: 1 / 2;
+    margin-bottom: 9rem;
+  }
+
+  .højre-tekst {
+    margin-top: -10rem;
+    margin-bottom: 4rem;
+  }
+
+  .billeder {
+    grid-column: 2 / 3;
+    margin-left: 2rem;
+    margin-top: -7rem;
+  }
+
+  /************** UX/UI ***************/
+
+  .dokumentation {
+    padding: 1rem;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+  .klikmig-ux {
+    font-family: Cormorant Infant;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 200;
+    color: #9c7365;
+    text-decoration: underline;
+    margin-left: 10vw;
+    margin-top: 2rem;
+  }
+
+  /************** ANIMATION ****************/
+  .comani {
+    grid-column: 2 / 3;
+  }
+
+  .skitsera {
+    margin-top: 2rem;
+    max-width: 90%;
+    height: auto;
+    display: block;
+  }
+  .klikmigani {
+    margin-left: 8rem;
+  }
+  .comskærm {
+    margin-left: 3rem;
+    max-width: 80%;
+    height: auto;
+    display: block;
+  }
+
+  #anim {
+    font-size: 40px;
+  }
+
+  /* h1 animation */
+  @keyframes anim_kf {
+    0% {
+      translate: 0 -50%;
+    }
+    100% {
+      translate: 0 70%;
+    }
+  }
+
+  .klikmigani {
+    margin-top: -4rem;
+  }
+
+  /************* INDHOLD *****************/
+  .skitseri {
+    margin-left: 2rem;
+    max-width: 90%;
+    height: auto;
+    display: block;
+  }
+
+  .klikmig-i {
+    margin-left: 9rem;
+  }
+  /******************* OM MIG *****************/
+  .portrætbillede {
+    margin: auto;
+    border-radius: 30px; /* Justér rundingen */
+    margin-bottom: 4rem;
+    max-width: 30%;
+    height: auto;
+    display: block;
+  }
+
+  /************* FOOTER ************/
+  .footer-links {
+    gap: 40px;
+    font-size: 14px;
   }
 }
